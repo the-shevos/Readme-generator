@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>README Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="readme.css">
+</head>
+<body>
+<button id="themeToggle" class="top-btn"><i class="fas fa-moon"></i> Dark Mode</button>
+<button id="askAI" class="top-btn"><i class="fas fa-robot"></i> Ask AI</button>
+
+<div class="container">
+    <div class="form-container">
+        <h1><i class="fas fa-book"></i> README Generator</h1>
+        <form id="readmeForm">
+            <input type="text" placeholder="Project Title" id="title" required>
+            <textarea placeholder="Project Description" id="description" required></textarea>
+            <textarea placeholder="Technologies Used (comma separated)" id="tech" required></textarea>
+            <textarea placeholder="Features (comma separated)" id="features" required></textarea>
+            <textarea placeholder="Installation Instructions" id="installation"></textarea>
+            <textarea placeholder="Usage Instructions" id="usage"></textarea>
+            <button type="submit"><i class="fas fa-magic"></i> Generate README</button>
+        </form>
+    </div>
+
+    <div class="output-container">
+        <div class="output-header">
+            <h2><i class="fas fa-file-alt"></i> Generated README</h2>
+            <button id="copyBtn"><i class="fas fa-copy"></i> Copy</button>
+        </div>
+        <textarea id="output" readonly></textarea>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="readme.js"></script>
+</body>
+</html>
