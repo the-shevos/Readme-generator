@@ -67,3 +67,7 @@ themeToggle.addEventListener('click', function() {
         themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
     }
 });
+
+askAI.addEventListener('click', function() {
+    window.location.href = 'ai.html';
+});
