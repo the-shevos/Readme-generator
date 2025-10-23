@@ -1,0 +1,183 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #d8c9c9 0%, #888a95 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-color: #222;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --output-bg: #f9f9f9;
+    --btn-green: #28a745;
+    --btn-green-hover: #218838;
+    --btn-blue: #222;
+    --btn-blue-hover: #444;
+    --btn-text: #fff;
+    --card-border: 2px solid #000;
+}
+
+body.dark {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e, #31333a, #373535);
+    --card-bg: rgba(34, 34, 34, 0.95);
+    --text-color: #f1f1f1;
+    --input-bg: #2c2c2c;
+    --input-border: #555;
+    --output-bg: #1e1e1e;
+    --btn-green: #2ecc71;
+    --btn-green-hover: #27ae60;
+    --btn-blue: #f1f1f1;
+    --btn-blue-hover: #ddd;
+    --btn-text: #222;
+    --card-border: 2px solid #fff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s ease;
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.form-container, .output-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, border 0.3s ease;
+    border: var(--card-border);
+}
+
+.form-container:hover, .output-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.25);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border: 1px solid var(--btn-blue);
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: var(--btn-green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: var(--btn-green-hover);
+    transform: translateY(-2px);
+}
+
+#copyBtn {
+    padding: 8px 14px;
+    background: var(--btn-blue);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#copyBtn:hover {
+    background: var(--btn-blue-hover);
+    transform: scale(1.05);
+}
+
+#output {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-family: monospace;
+    margin-top: 10px;
+    min-height: 460px;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    overflow: auto;
+    resize: vertical;
+    background: var(--output-bg);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.top-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: var(--btn-blue);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.2s ease, color 0.2s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-btn:hover {
+    background: var(--btn-blue-hover);
+}
+
+#askAI {
+    top: 70px;
+}
